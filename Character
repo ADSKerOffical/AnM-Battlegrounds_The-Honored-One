@@ -110,7 +110,7 @@ end)
 tool.Parent = game.Players.LocalPlayer.Backpack
 
 local tool = Instance.new("Tool")
-tool.Name = "Combo"
+tool.Name = "Energy splash"
 tool.RequiresHandle = false
 
 local lastPressTime = 0
@@ -118,11 +118,8 @@ tool.Activated:Connect(function()
   local currentTime = tick()
             if currentTime - lastPressTime >= 5 then
                 lastPressTime = currentTime 
-          for i = 1, 1 do
-        game:GetService("ReplicatedStorage").Remotes.Blue2:FireServer()
-          end
-          for i = 1, 10 do
-game:GetService("ReplicatedStorage").Remotes.Red:FireServer()
+          for i = 1, 5 do
+game:GetService("ReplicatedStorage").GojoV3.maxred:FireServer()
 end
             end
 end)
